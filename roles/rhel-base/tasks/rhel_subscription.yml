@@ -1,0 +1,5 @@
+- name: Register and subscribe the server with Redhat
+  redhat_subscription:
+     state: present
+     activationkey: hhhhhhhhhhh
+     org_id: 1234567899

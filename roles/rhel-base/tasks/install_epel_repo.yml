@@ -1,0 +1,8 @@
+- name: Download the EPEL repo
+  get_url:
+      url: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+      dest: /tmp/epel.rpm
+- name: Install EPEL package
+  yum:
+     name: /tmp/epel.rpm
+     state: present

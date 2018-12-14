@@ -1,0 +1,2 @@
+- include: ahinh_admin.yml
+  tags: ['ahinh_admin']

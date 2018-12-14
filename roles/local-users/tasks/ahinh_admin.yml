@@ -1,0 +1,18 @@
+- name: Adding ahinh_admin to the system
+  user:
+     name: ahinh_admin
+     comment: Alec Hinh (Admin)
+     uid: 5050
+     groups:
+         - wheel
+     state: present
+     shell: /bin/bash
+     system: no
+     createhome: yes
+     home: /home/ahinh_admin
+
+- name: Unlock ahinh_admin and set password to empty
+  command: passwd -d ahinh_admin
+
+- name: Expire ahinh_admin
+  command: chage -d 0 ahinh_admin

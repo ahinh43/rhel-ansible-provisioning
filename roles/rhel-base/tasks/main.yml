@@ -1,0 +1,13 @@
+- name: Set the hostname to the corresponding server
+  hostname:
+     name: '{{ inventory_hostname }}'
+
+
+- include: rhel_subscription.yml
+  tags: ['rhel_subscription']
+- include: install_epel_repo.yml
+  tags: ['epel']
+- include: update_all.yml
+  tags: ['update_all']
+- include: install_base_packages.yml
+  tags: ['base_packages']

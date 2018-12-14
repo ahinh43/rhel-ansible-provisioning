@@ -1,0 +1,9 @@
+- name: Provisions the base OS
+  hosts: hosts
+  remote_user: ansible_admin
+  become: yes
+  serial: 5
+
+  roles:
+       - rhel-base
+       - local-users

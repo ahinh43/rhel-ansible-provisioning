@@ -1,0 +1,4 @@
+- name: Install Base Packages
+  yum:
+    name: "[u'rsync', u'tmux', u'git', u'vim', u'telnet', u'bind-utils', u'net-tools', u'yum-utils']"
+    state: present
